@@ -1,6 +1,6 @@
 <div class="container">
 
-    <form id="signup">
+    <form id="signup" action="/save" method="post">
 
         <div class="header">
 
@@ -14,15 +14,25 @@
 
         <div class="inputs">
 
-            <input type="email" placeholder="e-mail" autofocus />
+            <input type="email" id="mail" name="mail" placeholder="e-mail" autofocus />
 
-            <input type="password" placeholder="Password" />
+            <input type="password" id="pass" name="pass" placeholder="Password" />
 
             <div class="checkboxy">
                 <input name="cecky" id="checky" value="1" type="checkbox" /><label class="terms">I accept the terms of use</label>
             </div>
 
-            <a id="submit" href="#">SIGN UP FOR INVITE NOW</a>
+            <input type="submit" id="submit" class="submit" value="SIGN UP NOW" />
+
+            <div id="label_or">
+                <label class="terms" id="or">OR</label>
+            </div>
+
+            <input type="submit" id="submit_sign" class="submit" value="SIGN IN" formaction="/signin" formmethod="post"/>
+
+        </div>
+
+        <div class="inputs">
 
         </div>
 
